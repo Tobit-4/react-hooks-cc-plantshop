@@ -10,13 +10,13 @@ function NewPlantForm({ onAddPlant }) {
     const newPlantData={
       name: name,
       image: image,
-      price: parseFloat(price)
+      price: price.toString()
     }
 
     fetch('http://localhost:6001/plants',{
       method: "POST",
       headers:{
-        "Content-Type": "application/json"
+        "Content-Type": "Application/JSON"
       },
       body:JSON.stringify(newPlantData)
     })

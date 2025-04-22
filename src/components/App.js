@@ -11,10 +11,7 @@ const [ searchTerm,setSearchTerm ] = useState('')
 
 useEffect(()=>{
   fetch('http://localhost:6001/plants')
-  .then((r)=>{
-    if(!r.ok) if (!r.ok) throw new Error("Failed to fetch plants");
-    return r.json();
-  })
+  .then((r)=>r.json())
   .then((data)=>{
     console.log("Fetched plants:", data);
     setPlants(data)
