@@ -20,7 +20,7 @@ function PlantCard({ plant }) {
       <h4>{plant.name}</h4>
       <p>Price: {plant.price}</p>
         <button className={isSoldOut ? "" : 'primary'}
-        onClick={toggleSoldOut}>{isSoldOut ? "Out of Stock" : "Instock"}</button>
+        onClick={toggleSoldOut}>{isSoldOut ? "Out of Stock" : "In stock"}</button>
     </li>
   );
 }
